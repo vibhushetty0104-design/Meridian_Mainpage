@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+/*
+ * Meridian Vascular Design System Tokens (DESIGN.md aligned)
+ * Editorial Luxury Healthcare Theme: Alternating Rhythm of Forest, Warm Ivory & Soft Sage
+ */
+@theme {
+  --color-mv-forest: #0B4036;
+  --color-mv-forest-dark: #073A32;
+  --color-mv-forest-deep: #072E27;
+  --color-mv-forest-secondary: #174F43;
+  --color-mv-forest-card: #103D35;
+  --color-mv-forest-elevated: #164B40;
+  --color-mv-terracotta: #CE5B40;
+  --color-mv-cta: #A9472F;
+  --color-mv-cta-press: #8E3A26;
+  --color-mv-sage: #8DAA9D;
+  --color-mv-pale: #E4ECE6;
+  --color-mv-ivory: #F7F5EF;
+  --color-mv-sand: #FAF8F4;
+  --color-mv-surface: #FFFFFF;
+  --color-mv-ink: #17241F;
+  --color-mv-ink-body: #42534E;
+  --color-mv-ink-muted: #788780;
+  --color-mv-border: #D9E1DB;
+  --color-mv-danger: #7B2434;
+  --color-mv-danger-surface: #FBEFEF;
+  --color-mv-warning: #7A4E0E;
+  --color-mv-warning-surface: #FBF3E2;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, Cambria, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --ease-mv-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-mv-exit: cubic-bezier(0.3, 0, 1, 1);
+}
+
+@layer base {
+  :root {
+    --font-serif: 'Source Serif 4', Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    
+    /* Meridian Vascular Luxury Editorial Palette */
+    --mv-forest: #0B4036;
+    --mv-forest-dark: #073A32;
+    --mv-forest-deep: #072E27;
+    --mv-forest-secondary: #174F43;
+    --mv-sage: #8DAA9D;
+    --mv-pale: #E4ECE6;
+    --mv-ivory: #F7F5EF;
+    --mv-sand: #FAF8F4;
+    --mv-surface: #FFFFFF;
+    --mv-terracotta: #CE5B40;
+    --mv-terracotta-dark: #A9472F;
+    --mv-ink: #17241F;
+    --mv-body: #42534E;
+    --mv-muted: #788780;
+    --mv-border: #D9E1DB;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--mv-ivory);
+    color: var(--mv-ink);
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom refined scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5EF;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(141, 170, 157, 0.45);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 64, 54, 0.6);
+}
+
+/* Tactile button interaction */
+.tap-tactile {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tap-tactile:active {
+  transform: scale(0.97);
+}
+
+/* Glassmorphism Dark */
+.glass-panel-dark {
+  background: rgba(16, 61, 53, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Glassmorphism Light */
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 225, 219, 0.8);
+}
+
+/* Subtle gentle floating animation for Meridbot */
+@keyframes meridbotFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-meridbot-float {
+  animation: meridbotFloat 3.6s ease-in-out infinite;
+}
+
+/* -------------------------------------------------------------
+ * FREELY FLOATING ANATOMICAL ILLUSTRATION ANIMATIONS
+ * Staggered individual physics for organic, living medical depth
+ * ------------------------------------------------------------- */
+@keyframes floatAnatomy1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+@keyframes floatAnatomy2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.8deg);
+  }
+}
+
+@keyframes floatAnatomy3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0.5deg);
+  }
+}
+
+@keyframes floatAnatomy4 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-0.5deg);
+  }
+}
+
+.animate-float-anatomy-1 {
+  animation: floatAnatomy1 4.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-anatomy-2 {
+  animation: floatAnatomy2 4.8s ease-in-out infinite 0.6s;
+  will-change: transform;
+}
+
+.animate-float-anatomy-3 {
+  animation: floatAnatomy3 3.9s ease-in-out infinite 1.2s;
+  will-change: transform;
+}
+
+.animate-float-anatomy-4 {
+  animation: floatAnatomy4 5.2s ease-in-out infinite 1.8s;
+  will-change: transform;
+}
+
+/* Meridbot mascot contact shadow & wiggle */
+@keyframes mvBotWiggle {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg) translateY(-2px); }
+  45% { transform: rotate(4deg) translateY(-3px); }
+  70% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-bot-wiggle {
+  animation: mvBotWiggle 560ms cubic-bezier(0.2, 0, 0, 1) 1;
+}
+
+@keyframes mvFloatShadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.22;
+  }
+  50% {
+    transform: scale(0.82);
+    opacity: 0.12;
+  }
+}
+
+.animate-mascot-shadow {
+  animation: mvFloatShadow 3.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-meridbot-float,
+  .animate-float-anatomy-1,
+  .animate-float-anatomy-2,
+  .animate-float-anatomy-3,
+  .animate-float-anatomy-4,
+  .animate-bot-wiggle,
+  .animate-mascot-shadow {
+    animation: none !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Meridian Vascular",
+  "description": "Central healthcare homepage and clinical service discovery platform delivering precision daycare vascular and surgical treatments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
